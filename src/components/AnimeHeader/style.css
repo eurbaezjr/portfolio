@@ -1,0 +1,18 @@
+/* Adds a space between the words in the header when a screen is larger than 984px
+@media screen and (min-width: 984px) {
+    span + span {
+      margin-left: 1em;
+    }
+  } */
+
+.ml15 {
+    font-weight: 800;
+    font-size: 3.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+  }
+  
+  .ml15 .word {
+    display: inline-block;
+    line-height: 1em;
+  }

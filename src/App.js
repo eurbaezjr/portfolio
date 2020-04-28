@@ -6,7 +6,6 @@ import Search from "./pages/Search";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
-import anime from 'animejs/lib/anime.es.js';
 
 function App() {
   return (

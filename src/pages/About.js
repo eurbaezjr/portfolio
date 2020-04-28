@@ -3,18 +3,20 @@ import Hero from "../components/Hero";
 import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
+import AnimeHeader from "../components/AnimeHeader"
+import AnimeSubHeader from "../components/AnimeSubHeader"
 
 function About() {
   return (
     <div>
       <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg">
-        <h1>Pupster</h1>
-        <h2>They're the Good Boys and Girls</h2>
+        <AnimeHeader>Eduardo Urbaez</AnimeHeader>
+        <AnimeSubHeader>Full-Stack Web Developer &amp; Data Marketer</AnimeSubHeader>
       </Hero>
       <Container style={{ marginTop: 30 }}>
         <Row>
           <Col size="md-12">
-            <h1>Welcome To Pupster!</h1>
+            <h1>Welcome To My Portfolio Page.</h1>
           </Col>
         </Row>
         <Row>
