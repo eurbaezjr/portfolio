@@ -1,10 +1,10 @@
 .hero {
-  height: 1300px;
+  height: 100%;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   position: relative;
   background-size: auto, cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y ;
   overflow: hidden;
 }
 
