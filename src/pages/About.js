@@ -6,6 +6,7 @@ import Col from "../components/Col";
 import AnimeHeader from "../components/AnimeHeader"
 import AnimeSubHeader from "../components/AnimeSubHeader"
 import AvatarIcon from "../components/AvatarIcon"
+import MyVerticalTimeline from "../components/MyVerticalTimeline"
 
 function About() {
 
@@ -37,6 +38,7 @@ function About() {
         <AvatarIcon handle={gitHubUser} />
         <AnimeHeader>Eduardo Urbaez</AnimeHeader>
         <AnimeSubHeader>Web Developer &amp; Data Marketer</AnimeSubHeader>
+        <MyVerticalTimeline/>
       </Hero>
     </div>
   );

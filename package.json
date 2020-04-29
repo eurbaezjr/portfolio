@@ -6,6 +6,11 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "@vx/gradient": "0.0.195",
+    "@vx/group": "0.0.195",
+    "@vx/mock-data": "0.0.195",
+    "@vx/shape": "0.0.195",
+    "@vx/vx": "0.0.195",
     "animejs": "^3.2.0",
     "axios": "^0.19.2",
     "react": "^16.13.1",
@@ -13,9 +18,11 @@
     "react-anime": "^3.0.3",
     "react-avatar": "^3.9.3",
     "react-dom": "^16.13.1",
+    "react-horizontal-timeline": "^1.5.3",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
-    "react-trend": "^1.2.5"
+    "react-trend": "^1.2.5",
+    "react-vertical-timeline-component": "^2.6.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -37,5 +44,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   }
 }
