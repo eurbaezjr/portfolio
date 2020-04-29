@@ -4,36 +4,6 @@ import Anime from "react-anime";
 
 function AnimeSubHeader(props) {
 
-    var easingNames = [
-        'easeInQuad',
-        'easeInCubic',
-        'easeInQuart',
-        'easeInQuint',
-        'easeInSine',
-        'easeInExpo',
-        'easeInCirc',
-        'easeInBack',
-        'easeInBounce',
-        'easeInOutQuad',
-        'easeInOutCubic',
-        'easeInOutQuart',
-        'easeInOutQuint',
-        'easeInOutSine',
-        'easeInOutExpo',
-        'easeInOutCirc',
-        'easeInOutBack',
-        'easeInOutBounce',
-        'easeOutQuad',
-        'easeOutCubic',
-        'easeOutQuart',
-        'easeOutQuint',
-        'easeOutSine',
-        'easeOutExpo',
-        'easeOutCirc',
-        'easeOutBack',
-        'easeOutBounce'
-      ]
-
     let animeProps = {
         easing: 'easeOutBounce',
         scale: [0, 0.75],
@@ -44,15 +14,15 @@ function AnimeSubHeader(props) {
 
     return (
         <div>
-            <Anime {...animeProps}>
-            <h1 class="ml9">
+            <Anime {...animeProps} className='heroSubHeader'>
+            <h2 class="ml9">
                 <span class="text-wrapper">
                     <span class="letters">
                         {props.children.split("").map(letter => (
-                            <span class='letter'>{letter}</span>
+                            <span className='letter'>{letter}</span>
                         ))}</span>
                 </span>
-            </h1>
+            </h2>
             </Anime>
         </div>
     );

@@ -1,17 +1,26 @@
-import React from "react";
+import React, { Component } from "react";
 import Hero from "../components/Hero";
 import Container from "../components/Container";
 import Row from "../components/Row";
 import Col from "../components/Col";
 import AnimeHeader from "../components/AnimeHeader"
 import AnimeSubHeader from "../components/AnimeSubHeader"
+import AvatarIcon from "../components/AvatarIcon"
+import "./style.css";
 
 function About() {
+
+  // github handle for avatar image. 
+  
+  let gitHubUser = 'eurbaezjr'
+
+
   return (
     <div>
-      <Hero backgroundImage="https://i.imgur.com/qkdpN.jpg">
+      <Hero backgroundImage="https://images.pexels.com/photos/2694037/pexels-photo-2694037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+        <AvatarIcon handle={gitHubUser} />
         <AnimeHeader>Eduardo Urbaez</AnimeHeader>
-        <AnimeSubHeader>Full-Stack Web Developer &amp; Data Marketer</AnimeSubHeader>
+        <AnimeSubHeader>Web Developer &amp; Data Marketer</AnimeSubHeader>
       </Hero>
       <Container style={{ marginTop: 30 }}>
         <Row>
@@ -22,17 +31,10 @@ function About() {
         <Row>
           <Col size="md-12">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet diam tortor, id
-              consequat mauris ullamcorper eu. Orci varius natoque penatibus et magnis dis
-              parturient montes, nascetur ridiculus mus. Pellentesque et dui id justo finibus
-              sollicitudin at et metus. Ut feugiat tellus nec metus commodo, sed suscipit nisi
-              gravida. Duis eget vestibulum quam, ut porttitor sem. Donec sagittis mi sollicitudin
-              turpis semper, et interdum risus lobortis. Vestibulum suscipit nunc non egestas
-              tristique. Proin hendrerit efficitur malesuada. Mauris lorem urna, sodales accumsan
-              quam non, tristique tempor erat. Nullam non sem facilisis, tempus tortor sit amet,
-              volutpat nisl. Ut et turpis non nunc maximus mollis a vitae tortor. Pellentesque
-              mattis risus ac quam laoreet cursus. Praesent suscipit orci neque, vestibulum
-              tincidunt augue tincidunt non. Duis consequat mattis tortor vitae mattis.
+              I am a driven, creative and bilingual developer with leadership experience in the field of data-driven programmatic advertising.
+              Currently seeking product leadership roles with a focus on automation, algorithms, and efficiency solutions.
+              Proven ability to research, market, and manage multiple types of projects for local and international clients.
+              My main aspiration is to mix my experience in data, marketing, design, and coding into synergetic solution on behalf of your organization.
             </p>
             <p>
               Phasellus at rutrum nisl. Praesent sed massa ut ipsum bibendum porttitor. Sed

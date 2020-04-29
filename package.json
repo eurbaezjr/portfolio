@@ -11,6 +11,7 @@
     "react": "^16.13.1",
     "react-animations": "^1.0.0",
     "react-anime": "^3.0.3",
+    "react-avatar": "^3.9.3",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1"

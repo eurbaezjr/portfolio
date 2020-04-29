@@ -15,7 +15,7 @@ function AnimeHeader(props) {
 
     return (
         <div>
-            <Anime {...animeProps} >
+            <Anime {...animeProps} className='heroHeader'>
                 <h1 className="ml15">
                     <span className="word">{props.children}</span>
 
