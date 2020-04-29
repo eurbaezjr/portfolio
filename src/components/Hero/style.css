@@ -1,5 +1,5 @@
 .hero {
-  height: 600px;
+  height: 1300px;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -33,4 +33,8 @@
   margin-top: 20px;
   margin-right: 0px;
   margin-left: 0px;
+}
+
+.trendline {
+  margin-top: 0px;
 }
