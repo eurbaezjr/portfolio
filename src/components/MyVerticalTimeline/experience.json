@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "title": "Associate Director, Data Solutions",
+        "date": "2019 - Present",
+        "org": "Horizon Media",
+        "location": "Los Angeles, CA",
+        "description": "Leadership, programmatic media, data strategy, data collection, media negotiations, analysis and operations of STX Entertainment’s motion picture portfolio.",
+        "icon": "https://media-exp1.licdn.com/dms/image/C4D0BAQHSU7qHJ9WqZw/company-logo_200_200/0?e=1596067200&v=beta&t=IX7Q9zStsbepH1mj6qN_1BZhbyoc9cduigGbj-gVh5A",
+        "orgLink": "https://www.horizonmedia.com/"
+    },
+    {
+        "id": 2,
+        "title": "Certification, Coding Bootcamp",
+        "date": "2019 - 2020",
+        "org": "UCLA Extension",
+        "location": "Los Angeles, CA",
+        "description": "24-week intensive program focused on full-stack programming skills in HTML5, CSS3, Javascript, JQuery, Bootstrap, Node.js, MySQL, MongoDB, Express, Handelbars.js, ReactJS, etc.",
+        "icon": "https://media-exp1.licdn.com/dms/image/C4E0BAQHOzSYLFuUMHg/company-logo_200_200/0?e=1596067200&v=beta&t=xRUuL5GwKcl9dePY8LX7DXA0lAnqrk8ooI-ZQjEbnUk"
+    },
+    {
+        "id": 3,
+        "title": "Manager, Data Solutions",
+        "date": "2017 - 2019",
+        "org": "Horizon Media",
+        "location": "Los Angeles, CA",
+        "description": "Initiated STX's programmatic media team, expanded data offering, audited 350+ partners, began log-level data collection and analyzed nearly 65,536 rows of raw information to identify macro revenue drivers.",
+        "icon": "https://media-exp1.licdn.com/dms/image/C4D0BAQHSU7qHJ9WqZw/company-logo_200_200/0?e=1596067200&v=beta&t=IX7Q9zStsbepH1mj6qN_1BZhbyoc9cduigGbj-gVh5A"
+    },
+    {
+        "id": 4,
+        "title": "Media Associate, Programmatic",
+        "date": "2016 - 2017",
+        "org": "Starcom",
+        "location": "Chicago, IL",
+        "description": "Led, planned, analyzed, optimized, and reported on RTB media campaigns and programs while meeting and surpassing Best Buy's online revenue goals.",
+        "icon": "https://media-exp1.licdn.com/dms/image/C510BAQHESUQvsN3MpQ/company-logo_200_200/0?e=1596067200&v=beta&t=IBEJGPBp-YydEPSVO9QKqiG5xqYQDigX7q_GLrv5zgM"
+    },
+    {
+        "id": 5,
+        "title": "Project Manager, Contract",
+        "date": "2015 - 2016",
+        "org": "Brandgarten",
+        "location": "Madison, WI",
+        "description": "Strengthened the value proposition of two global marketing campaigns for OB Tampons and Johnson&Johnson’s Rogain by identifying emotionally driven consumer attitudes.",
+        "icon": "https://media-exp1.licdn.com/dms/image/C560BAQG0H3b8zt9SeQ/company-logo_200_200/0?e=1596067200&v=beta&t=XrmBEUYiVGohvMDJ1fmqRmIMmue8a0twLs1u-Dd6GrQ"
+    },
+    {
+        "id": 6,
+        "title": "Software Trainer",
+        "date": "2012",
+        "org": "University of Wisconsin - Madison",
+        "location": "Madison, WI",
+        "description": "Taught students to use Microsoft Office, Adobe Creative Suite, Word Press, and Ableton Live with each class consisting of twelve students.",
+        "icon": "https://media-exp1.licdn.com/dms/image/C560BAQFyYW54n5mwAw/company-logo_200_200/0?e=1596067200&v=beta&t=r_Hjf4aCGihGj4Z7w0AvYiReDEXiNXnbLx9BjEe_iCk"
+    },
+    {
+        "id": 7,
+        "title": "B.S, Science Communication",
+        "date": "2015",
+        "org": "University of Wisconsin - Madison",
+        "location": "Madison, WI",
+        "description": "Studied communication skills strategy and theory with a concentration in technology, advertising, social marketing, and risk communication.",
+        "icon": "https://media-exp1.licdn.com/dms/image/C560BAQFyYW54n5mwAw/company-logo_200_200/0?e=1596067200&v=beta&t=r_Hjf4aCGihGj4Z7w0AvYiReDEXiNXnbLx9BjEe_iCk"
+    }
+]

@@ -15,12 +15,11 @@ function AnimeSubHeader(props) {
     return (
         <div>
             <Anime {...animeProps} className='heroSubHeader'>
-            <h2 class="ml9">
-                <span class="text-wrapper">
-                    <span class="letters">
-                        {props.children.split("").map(letter => (
-                            <span className='letter'>{letter}</span>
-                        ))}</span>
+            <h2 className="ml9">
+                <span className="text-wrapper">
+                    <span className="letters">
+                        {props.children}
+                </span>
                 </span>
             </h2>
             </Anime>

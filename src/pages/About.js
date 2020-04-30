@@ -10,26 +10,6 @@ import MyVerticalTimeline from "../components/MyVerticalTimeline"
 
 function About() {
 
-          /* <Container style={{ marginTop: 30 }}>
-        <Row>
-          <Col size="md-12">
-            <h1>Welcome To My Portfolio Page.</h1>
-          </Col>
-        </Row>
-        <Row>
-          <Col size="md-12">
-            <p>
-              I am a driven, creative and bilingual developer with leadership experience in the field of data-driven programmatic advertising.
-              Currently seeking product leadership roles with a focus on automation, algorithms, and efficiency solutions.
-              Proven ability to research, market, and manage multiple types of projects for local and international clients.
-              My main aspiration is to mix my experience in data, marketing, design, and coding into synergetic solution on behalf of your organization.
-            </p>
-          </Col>
-        </Row>
-      </Container> */
-
-
-  // github handle for avatar image. 
   let gitHubUser = 'eurbaezjr'
 
   return (
