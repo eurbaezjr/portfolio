@@ -46,21 +46,21 @@
         "icon": "https://media-exp1.licdn.com/dms/image/C560BAQG0H3b8zt9SeQ/company-logo_200_200/0?e=1596067200&v=beta&t=XrmBEUYiVGohvMDJ1fmqRmIMmue8a0twLs1u-Dd6GrQ"
     },
     {
-        "id": 6,
-        "title": "Software Trainer",
-        "date": "2012",
-        "org": "University of Wisconsin - Madison",
-        "location": "Madison, WI",
-        "description": "Taught students to use Microsoft Office, Adobe Creative Suite, Word Press, and Ableton Live with each class consisting of twelve students.",
-        "icon": "https://media-exp1.licdn.com/dms/image/C560BAQFyYW54n5mwAw/company-logo_200_200/0?e=1596067200&v=beta&t=r_Hjf4aCGihGj4Z7w0AvYiReDEXiNXnbLx9BjEe_iCk"
-    },
-    {
         "id": 7,
         "title": "B.S, Science Communication",
         "date": "2015",
         "org": "University of Wisconsin - Madison",
         "location": "Madison, WI",
         "description": "Studied communication strategy and theory with a concentration in technology, advertising, social marketing, and risk communication.",
+        "icon": "https://media-exp1.licdn.com/dms/image/C560BAQFyYW54n5mwAw/company-logo_200_200/0?e=1596067200&v=beta&t=r_Hjf4aCGihGj4Z7w0AvYiReDEXiNXnbLx9BjEe_iCk"
+    },
+    {
+        "id": 6,
+        "title": "Software Trainer",
+        "date": "2012",
+        "org": "University of Wisconsin - Madison",
+        "location": "Madison, WI",
+        "description": "Taught students to use Microsoft Office, Adobe Creative Suite, Word Press, and Ableton Live with each class consisting of twelve students.",
         "icon": "https://media-exp1.licdn.com/dms/image/C560BAQFyYW54n5mwAw/company-logo_200_200/0?e=1596067200&v=beta&t=r_Hjf4aCGihGj4Z7w0AvYiReDEXiNXnbLx9BjEe_iCk"
     }
 ]

@@ -18,8 +18,6 @@ function App() {
           <Route exact path="/" component={Experience} />
           <Route exact path="/experience" component={Experience} />
           <Route exact path="/portfolio" component={Portfolio} />
-          <Route exact path="/discover" component={Discover} />
-          <Route exact path="/search" component={Search} />
         </Wrapper>
         <Footer />
       </div>

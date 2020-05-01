@@ -10,7 +10,6 @@ function AnimeHeader(props) {
         scale: [14, 1],
         duration: 1200,
         elasticity: 1000,
-        delay: (el, i) => 100 * (i + 1)
     }
 
     return (
