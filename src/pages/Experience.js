@@ -8,7 +8,7 @@ import AnimeSubHeader from "../components/AnimeSubHeader"
 import AvatarIcon from "../components/AvatarIcon"
 import MyVerticalTimeline from "../components/MyVerticalTimeline"
 
-function About() {
+function Experience() {
 
   let gitHubUser = 'eurbaezjr'
 
@@ -24,4 +24,4 @@ function About() {
   );
 }
 
-export default About;
+export default Experience;

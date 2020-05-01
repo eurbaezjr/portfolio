@@ -1,6 +1,6 @@
 import axios from "axios";
 
-// Export an object containing methods we'll use for accessing the Dog.Ceo API
+// Export an object containing methods we'll use for accessing repos API
 
 export default {
   getRandomDog: function() {
@@ -11,5 +11,8 @@ export default {
   },
   getBaseBreedsList: function() {
     return axios.get("https://dog.ceo/api/breeds/list");
-  }
+  },
+  getStarredRepos: function(gitHubUserName) {
+    return axios.get("https://api.github.com/users/" + gitHubUserName + "/starred");
+  },
 };
