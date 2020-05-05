@@ -15,4 +15,7 @@ export default {
   getStarredRepos: function(gitHubUserName) {
     return axios.get("https://api.github.com/users/" + gitHubUserName + "/starred");
   },
+  getReposContent: function(fullRepoName) {
+    return axios.get("http://api.github.com/repos/" + fullRepoName + "/contents/media");
+  }
 };
