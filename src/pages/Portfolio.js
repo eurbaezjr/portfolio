@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import MyHorizontalTimeline from "../components/MyHorizontalTimeline"
 import { render } from "react-dom";
-import API from "../utils/API"
-import Hero from "../components/MyHorizontalTimeline"
+import ProjectSearch from "../components/ProjectSearch"
 
 class Portfolio extends Component {
 
@@ -10,7 +8,7 @@ class Portfolio extends Component {
  
   return (
     <div>
-      <MyHorizontalTimeline/>
+      <ProjectSearch/>
     </div>
   );
 }

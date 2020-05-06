@@ -17,7 +17,7 @@ contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
 contentArrowStyle={{ borderRight: '13px solid  rgb(33, 150, 243)' }}
 date={e.date}
 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff', overflow: 'hidden', width:'auto', height:'auto', position:'center' }}
-icon={<img src={e.icon} width='70px' height='70px'/>}
+icon={<img src={e.icon} width='70px' height='70px' alt={e.icon}/>}
 key={e.id}
 >
 <h3 className="vertical-timeline-element-title">{e.title}</h3>
