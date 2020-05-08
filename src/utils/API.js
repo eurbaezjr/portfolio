@@ -13,10 +13,11 @@ export default {
     return axios.get("https://dog.ceo/api/breeds/list");
   },
   getStarredRepos: function(gitHubUserName) {
-    return axios.get("https://api.github.com/users/" + gitHubUserName + "/starred");
+    return axios.get("https://api.github.com/users/" + gitHubUserName + "/starred", {headers: {"Access-Control-Allow-Origin": "*"}}, 
+    );
   },
   getReposContent: function(fullRepoName) {
-    return axios.get("http://api.github.com/repos/" + fullRepoName + "/contents");
+    return axios.get("http://api.github.com/repos/" + fullRepoName + "/contents", {headers: {"Access-Control-Allow-Origin": "*"}});
   }
 };
 

@@ -1,13 +1,12 @@
 import React from "react";
 import "./style.css";
-import { checkPropTypes } from "prop-types";
 
 function ProjectCard(props) {
   return (
     <div className="card" id={props.id}>
       <a href={props.url}>
       <div className="img-container">
-        <img alt={props.name} src={props.image} />
+        <img alt={props.name} src={props.gif} />
       </div>
       <div className="content">
         <ul>
@@ -15,10 +14,10 @@ function ProjectCard(props) {
             <strong>Name:</strong> {props.name}
           </li>
           <li>
-            <strong>Occupation:</strong> {props.occupation}
+            <strong>Description:</strong> {props.description}
           </li>
           <li>
-            <strong>Location:</strong> {props.location}
+            <strong>Readme:</strong> {props.readme}
           </li>
         </ul>
       </div>

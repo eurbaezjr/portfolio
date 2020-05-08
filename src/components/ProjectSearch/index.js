@@ -1,18 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import API from "../../utils/API";
 import SearchForm from "./SearchForm";
 import ProjectCard from "../ProjectCard";
 import Wrapper from "../Wrapper";
 import "./style.css";
-import { element, object } from 'prop-types';
 
-class ProjectSearch extends Component {
-  state = {
+class ProjectSearch extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
     gitHubUserName: "eurbaezjr",
     search: "",
     starred: [],
     results: []
-  }
+  }}
   
 // Start Github.API query prior DOM is ready
 componentDidMount(){ 
@@ -23,22 +24,22 @@ componentDidMount(){
   loadGitData = (el) => {
     API.getStarredRepos(el)
       .then(res => {
+        let arr = [];
         res.data.map(el => {
-        return this.loadRepoContent(el)
+         let object = this.loadRepoContent(el)
+        return arr.push(object)
         })
+        console.log(arr)
+        return arr
       })
       .catch(err => console.log(err));
-      console.log(this.state.results)
   };
-
-
 // Queries gitHub API for the content in each repo in the starred content
 loadRepoContent = (e) => {
-console.log(e)
  let obj = {
-   repoName: e.name,
+   name: e.name,
    gif: "",
-   readMeContent: "", 
+   readme: "", 
    url: e.html_url,
    id: e.id,
    description: e.description
@@ -46,33 +47,44 @@ console.log(e)
    API.getReposContent(e.full_name)
    .then(res => { 
     res.data.map(el => {
-    if (el.url.includes(".gif") === true || el.url.includes("README.md") === true) {
     if (el.url.includes(".gif") === true) {
-    return obj.gifURL = el.hdownload_url
+     let gif = this.cdnModify(el.download_url)  
+    return obj.gif = gif
     }
     else if (el.url.includes("README.md") === true){
-    return  obj.readMeContent = el.download_url
+     let readme =  this.cdnModify(el.download_url)
+    return  obj.readMeContent = readme
     }
-  }
+    else {
+      return ""
+    }
   })
 }).catch(err => console.log(err));
 
-return this.state.results.push(obj)
+return obj
 
 }
+// routes gif and README through Content Delivery Network (CDN)
+cdnModify = (link) => {
+  // Prior modify https://raw.githubusercontent.com/eurbaezjr/day-scheduler/master/day-scheduler.gif
+  // After modify https://cdn.jsdelivr.net/gh/eurbaezjr/day-scheduler/day-scheduler.gif
 
+let string = link.replace("raw.githubusercontent.com", "cdn.jsdelivr.net/gh")
+let stringTwo = string.replace("/master", "")
+return stringTwo
+}
 // As user inputs information on the search form, set the state and trigger SearchProjects
   handleInputChange = event => {
-    const name = event.target.name;
-    const value = event.target.value;
+    const name = event.target.name
+    const value = event.target.value
     this.setState({
       [name]: value
     });
     event.preventDefault();
     setTimeout(() => {
      return this.searchProjects(this.state.search);
-    }, 1000);
-  };
+    }, 1000)
+  }
 
 // Filter for all projects based on user input data
   // searchProjects = search => {
@@ -93,6 +105,19 @@ return this.state.results.push(obj)
           handleInputChange={this.handleInputChange}
         />
         <Wrapper>
+        <div className='row'>
+{this.state.results.map(result => (
+  <ProjectCard
+    id={result.id}
+    url={result.url}
+    key={result.id}
+    name={result.name}
+    image={result.gif}
+    description={result.description}
+    >
+  </ProjectCard>
+))}
+</div>
           </Wrapper>
       </div>
     )
@@ -100,17 +125,3 @@ return this.state.results.push(obj)
 }
 
 export default ProjectSearch
-
-{/* <div className='row'>
-{this.state.results.map(result => (
-  <ProjectCard
-    id={result.id}
-    url={result.html_url}
-    key={result.id}
-    name={result.name}
-    image={result.image}
-    occupation={result.occupation}
-    location={result.location}>
-  </ProjectCard>
-))}
-</div> */}
