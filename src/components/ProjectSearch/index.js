@@ -34,17 +34,21 @@ componentDidMount(){
 
 // Queries gitHub API for the content in each repo in the starred content
 loadRepoContent = (e) => {
+console.log(e)
  let obj = {
    repoName: e.name,
-   gifURL: "",
-   readMeContent: "" 
+   gif: "",
+   readMeContent: "", 
+   url: e.html_url,
+   id: e.id,
+   description: e.description
  }
    API.getReposContent(e.full_name)
    .then(res => { 
     res.data.map(el => {
     if (el.url.includes(".gif") === true || el.url.includes("README.md") === true) {
     if (el.url.includes(".gif") === true) {
-    return obj.gifURL = el.html_url
+    return obj.gifURL = el.hdownload_url
     }
     else if (el.url.includes("README.md") === true){
     return  obj.readMeContent = el.download_url
