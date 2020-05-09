@@ -82,7 +82,8 @@ loadReadMe = (e) => {
      res.data.map(el => {
      try {
      if (el.url.includes("README.md") === true) {
-     return readme = this.cdnModify(el.download_url)
+     readme = this.cdnModify(el.download_url)
+     return readme
      }
     }  
      catch(err) {
@@ -93,7 +94,30 @@ loadReadMe = (e) => {
   })
 }
 
+// LOOK FOR METHOD TO RETURN HTML FROM LINK AS STRING
+// httpGet = (theUrl) =>
+// {
+//     if (window.XMLHttpRequest)
+//     {// code for IE7+, Firefox, Chrome, Opera, Safari
+//         xmlhttp=new XMLHttpRequest();
+//     }
+//     else
+//     {// code for IE6, IE5
+//         xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+//     }
+//     xmlhttp.onreadystatechange=function()
+//     {
+//         if (xmlhttp.readyState==4 && xmlhttp.status==200)
+//         {
+//             return xmlhttp.responseText;
+//         }
+//     }
+//     xmlhttp.open("GET", theUrl, false );
+//     xmlhttp.send();    
+// }
+
 // Routes files through content delivery network (CDN)
+
 cdnModify = (link) => {
   // Prior modify https://raw.githubusercontent.com/eurbaezjr/day-scheduler/master/day-scheduler.gif
   // After modify https://cdn.jsdelivr.net/gh/eurbaezjr/day-scheduler/day-scheduler.gif
@@ -148,6 +172,7 @@ return stringTwo
     name={result.name}
     image={result.gif}
     description={result.description}
+    readme={result.readme}
     >
   </ProjectCard>
 ))}

@@ -6,7 +6,7 @@ function ProjectCard(props) {
     <div className="card" id={props.id}>
       <a href={props.url}>
       <div className="img-container">
-        <img alt={props.name} src={props.gif} />
+        <img alt={props.name} src={props.image} />
       </div>
       <div className="content">
         <ul>
@@ -18,6 +18,7 @@ function ProjectCard(props) {
           </li>
           <li>
             <strong>Readme:</strong> {props.readme}
+            
           </li>
         </ul>
       </div>
