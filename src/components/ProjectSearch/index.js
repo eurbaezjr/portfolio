@@ -11,7 +11,6 @@ class ProjectSearch extends React.Component {
     this.state = {
     gitHubUserName: "eurbaezjr",
     search: "",
-    starred: [],
     results: []
   }}
   
@@ -30,7 +29,7 @@ componentDidMount(){
         return arr.push(object)
         })
         console.log(arr)
-        return arr
+        return this.setState({results: arr})
       })
       .catch(err => console.log(err));
   };
