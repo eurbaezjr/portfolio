@@ -59,7 +59,7 @@ loadGif = (e) => {
      res.data.map(el => {
      try {
      if (el.url.includes(".gif") === true) {
-     return gif = el.download_url
+     return gif = this.cdnModify(el.download_url)
      }
      else {
      return ""
@@ -73,6 +73,7 @@ loadGif = (e) => {
     return gif
   })
 }
+
 // Searches repository for readme file
 loadReadMe = (e) => {
     return API.getReposContent(e.full_name)
@@ -81,7 +82,7 @@ loadReadMe = (e) => {
      res.data.map(el => {
      try {
      if (el.url.includes("README.md") === true) {
-     return readme =  el.download_url
+     return readme = this.cdnModify(el.download_url)
      }
     }  
      catch(err) {
@@ -92,17 +93,24 @@ loadReadMe = (e) => {
   })
 }
 
-// cdnModify = (link) => {
-//   // Prior modify https://raw.githubusercontent.com/eurbaezjr/day-scheduler/master/day-scheduler.gif
-//   // After modify https://cdn.jsdelivr.net/gh/eurbaezjr/day-scheduler/day-scheduler.gif
+// Routes files through content delivery network (CDN)
+cdnModify = (link) => {
+  // Prior modify https://raw.githubusercontent.com/eurbaezjr/day-scheduler/master/day-scheduler.gif
+  // After modify https://cdn.jsdelivr.net/gh/eurbaezjr/day-scheduler/day-scheduler.gif
 
-// let string = link.replace("raw.githubusercontent.com", "cdn.jsdelivr.net/gh")
-// let stringTwo = string.replace("/master", "")
-// return stringTwo
-// }
+let string = link.replace("raw.githubusercontent.com", "cdn.jsdelivr.net/gh")
+let stringTwo = string.replace("/master", "")
+return stringTwo
+}
+
 // As user inputs information on the search form, set the state and trigger SearchProjects
-
   handleInputChange = event => {
+    event.preventDefault();
+    this.loadGitData(this.state.gitHubUserName).then( data => {
+      console.log(data)
+       return this.setState({results : data})
+     })
+     
     const name = event.target.name
     const value = event.target.value
     this.setState({
@@ -115,13 +123,12 @@ loadReadMe = (e) => {
   }
 
 // Filter for all projects based on user input data
-  // searchProjects = search => {
-  //   this.loadGitData(this.gitHubUserName)
-  //   const results = this.state.results.filter((result) => {
-  //    return result.name.toLowerCase().includes(search.toLowerCase()) !== false || result.occupation.toLowerCase().includes(search.toLowerCase()) !== false  || result.location.toLowerCase().includes(search.toLowerCase()) !== false 
-  //   })
-  //   this.setState({ results });
-  // };
+  searchProjects = search => {
+    var results = this.state.results.filter((result) => {
+     return result.name.toLowerCase().includes(search.toLowerCase()) !== false || result.description.toLowerCase().includes(search.toLowerCase()) !== false
+    })
+    this.setState({ results });
+  };
 
   render() {
     return (
