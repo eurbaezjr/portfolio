@@ -16,63 +16,92 @@ class ProjectSearch extends React.Component {
   
 // Start Github.API query prior DOM is ready
 componentDidMount(){ 
-  this.loadGitData(this.state.gitHubUserName)
+  this.loadGitData(this.state.gitHubUserName).then( data => {
+   console.log(data)
+    return this.setState({results : data})
+  })
+  console.log(this.state.results)
 } 
 
 // Queries gitHub API for user data on starred contents
   loadGitData = (el) => {
-    API.getStarredRepos(el)
-      .then(res => {
-        let arr = [];
-        res.data.map(el => {
-         let object = this.loadRepoContent(el)
-        return arr.push(object)
+    return API.getStarredRepos(el)
+      .then(async (res) => {
+        return Promise.all(
+        res.data.map(
+          async (el) => {
+          let name = el.name 
+          let url = el.html_url
+          let id = el.id
+          let description = el.description
+          let readme = await this.loadReadMe(el)
+          let gif = await this.loadGif(el)
+          let object = {
+            name: name,
+            gif: gif,
+            readme: readme,
+            url: url,
+            id: id,
+            description: description }
+      
+        return object
         })
-        console.log(arr)
-        return this.setState({results: arr})
+        )
       })
       .catch(err => console.log(err));
   };
-// Queries gitHub API for the content in each repo in the starred content
-loadRepoContent = (e) => {
- let obj = {
-   name: e.name,
-   gif: "",
-   readme: "", 
-   url: e.html_url,
-   id: e.id,
-   description: e.description
- }
-   API.getReposContent(e.full_name)
-   .then(res => { 
-    res.data.map(el => {
-    if (el.url.includes(".gif") === true) {
-     let gif = this.cdnModify(el.download_url)  
-    return obj.gif = gif
-    }
-    else if (el.url.includes("README.md") === true){
-     let readme =  this.cdnModify(el.download_url)
-    return  obj.readMeContent = readme
-    }
-    else {
-      return ""
-    }
+
+// Searches repository for gif file
+loadGif = (e) => {
+    return API.getReposContent(e.full_name)
+    .then(res => {
+     let gif = "" 
+     res.data.map(el => {
+     try {
+     if (el.url.includes(".gif") === true) {
+     return gif = el.download_url
+     }
+     else {
+     return ""
+     }
+    }  
+     catch(err) {
+       console.log(err)
+     }
+   })
+   console.log(gif)
+    return gif
   })
-}).catch(err => console.log(err));
-
-return obj
-
 }
-// routes gif and README through Content Delivery Network (CDN)
-cdnModify = (link) => {
-  // Prior modify https://raw.githubusercontent.com/eurbaezjr/day-scheduler/master/day-scheduler.gif
-  // After modify https://cdn.jsdelivr.net/gh/eurbaezjr/day-scheduler/day-scheduler.gif
-
-let string = link.replace("raw.githubusercontent.com", "cdn.jsdelivr.net/gh")
-let stringTwo = string.replace("/master", "")
-return stringTwo
+// Searches repository for readme file
+loadReadMe = (e) => {
+    return API.getReposContent(e.full_name)
+    .then(res => {
+     let readme = "" 
+     res.data.map(el => {
+     try {
+     if (el.url.includes("README.md") === true) {
+     return readme =  el.download_url
+     }
+    }  
+     catch(err) {
+       console.log(err)
+     }
+   })
+   return readme
+  })
 }
+
+// cdnModify = (link) => {
+//   // Prior modify https://raw.githubusercontent.com/eurbaezjr/day-scheduler/master/day-scheduler.gif
+//   // After modify https://cdn.jsdelivr.net/gh/eurbaezjr/day-scheduler/day-scheduler.gif
+
+// let string = link.replace("raw.githubusercontent.com", "cdn.jsdelivr.net/gh")
+// let stringTwo = string.replace("/master", "")
+// return stringTwo
+// }
 // As user inputs information on the search form, set the state and trigger SearchProjects
+
   handleInputChange = event => {
     const name = event.target.name
     const value = event.target.value
@@ -92,7 +121,6 @@ return stringTwo
   //    return result.name.toLowerCase().includes(search.toLowerCase()) !== false || result.occupation.toLowerCase().includes(search.toLowerCase()) !== false  || result.location.toLowerCase().includes(search.toLowerCase()) !== false 
   //   })
   //   this.setState({ results });
-    
   // };
 
   render() {
