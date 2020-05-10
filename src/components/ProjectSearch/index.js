@@ -34,8 +34,10 @@ componentDidMount(){
           let url = el.html_url
           let id = el.id
           let description = el.description
-          let readme = await this.loadReadMe(el)
+          let readmelink = await this.loadReadMe(el)
+          let readme = await this.loadData(readmelink)
           let gif = await this.loadGif(el)
+          console.log(readme)
           let object = {
             name: name,
             gif: gif,
@@ -94,28 +96,14 @@ loadReadMe = (e) => {
   })
 }
 
-// LOOK FOR METHOD TO RETURN HTML FROM LINK AS STRING
-// httpGet = (theUrl) =>
-// {
-//     if (window.XMLHttpRequest)
-//     {// code for IE7+, Firefox, Chrome, Opera, Safari
-//         xmlhttp=new XMLHttpRequest();
-//     }
-//     else
-//     {// code for IE6, IE5
-//         xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-//     }
-//     xmlhttp.onreadystatechange=function()
-//     {
-//         if (xmlhttp.readyState==4 && xmlhttp.status==200)
-//         {
-//             return xmlhttp.responseText;
-//         }
-//     }
-//     xmlhttp.open("GET", theUrl, false );
-//     xmlhttp.send();    
-// }
-
+// Method to return html as string from the link 
+loadData = (url) => {
+  return fetch(url)
+    .then(function (response) {
+      console.log(url + " -> " + response.ok);
+      return response.text();
+    })
+}
 // Routes files through content delivery network (CDN)
 
 cdnModify = (link) => {

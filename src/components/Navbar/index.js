@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
+import { withRouter } from 'react-router-dom';
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 function Navbar() {
@@ -13,11 +14,10 @@ function Navbar() {
         <ul className="navbar-nav">
           <li className="nav-item">
             <Link
-              to="/"
+              to="/experience"
               className={
-                window.location.pathname === "/" || window.location.pathname === "/experience"
-                  ? "nav-link active"
-                  : "nav-link"
+               window.location.pathname === "/experience" || window.location.pathname === "/"
+                  ? "nav-link active": "nav-link"
               }
             >
               Experience
@@ -26,7 +26,11 @@ function Navbar() {
           <li className="nav-item">
             <Link
               to="/portfolio"
-              className={window.location.pathname === "/portfolio" ? "nav-link active" : "nav-link"}
+              className={
+                window.location.pathname === "/portfolio" 
+              ? "nav-link active" 
+              : "nav-link"
+            }
             >
               Portfolio
             </Link>
@@ -37,4 +41,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default withRouter((Navbar));
