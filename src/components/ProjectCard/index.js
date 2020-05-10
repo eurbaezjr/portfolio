@@ -9,7 +9,7 @@ function ProjectCard(props) {
           <img alt={props.name} src={props.image} height="300px" width="650px"/>
         </div>
         <div className="content">
-        <h3 className="justify-content-center cardHeader">{props.name.toString().replace("-"," ").replace("-"," ").replace("-"," ")}</h3>
+        <h3 className="justify-content-center cardHeader">{props.name.toString().replace(/-/g," ")}</h3>
           <h5>Description:</h5> 
           <text className="textalign">{props.description}</text> 
         </div>

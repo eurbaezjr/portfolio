@@ -65,7 +65,8 @@ text {
   height: 100%;
   color: white;
   text-align: left;
-  font-size: 18px;
+  font-weight: 200;
+  font-size: 25px;
   padding: 20px;
   overflow-wrap: break-word;
 }
