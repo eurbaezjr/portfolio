@@ -10,7 +10,7 @@ class Experience extends Component {
   state = {
     title: "",
     subtitle: "",
-    image: "https://images.pexels.com/photos/2694037/pexels-photo-2694037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    BackgroundImage: "https://images.pexels.com/photos/2694037/pexels-photo-2694037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     timeline: ""
   };
 
@@ -25,7 +25,7 @@ class Experience extends Component {
   render() {
     return (
       <div>
-        <Hero backgroundImage={this.state.image}>
+        <Hero backgroundImage={this.state.BackgroundImage}>
           <AvatarIcon/>
           <AnimeHeader>{this.state.title}</AnimeHeader>
           <AnimeSubHeader>{this.state.subtitle}</AnimeSubHeader>
