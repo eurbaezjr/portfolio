@@ -3,7 +3,7 @@ import "./style.css"
 
 function SearchForm(props) {
   return (
-    <form>
+    <form className="justify-content-center">
       <div className="form-group">
         <label htmlFor="search">Search:</label>
         <input

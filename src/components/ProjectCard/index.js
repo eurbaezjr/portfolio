@@ -4,24 +4,16 @@ import "./style.css";
 function ProjectCard(props) {
   return (
     <div className="card" id={props.id}>
-      <div className="img-container">
-        <img alt={props.name} src={props.image} />
-      </div>
-      <div className="content">
-        <ul>
-          <li>
-            <strong>Name:</strong> {props.name}
-
-          </li>
-          <li>
-            <strong>Description:</strong> {props.description}
-          </li>
-          <li>
-            <strong>Github Repository:</strong> <a href={props.url}> Click Here</a>
-            
-          </li>
-        </ul>
-      </div>
+      <a href={props.url}>
+        <div className="img-container">
+          <img alt={props.name} src={props.image} height="300px" width="650px"/>
+        </div>
+        <div className="content">
+        <h3 className="justify-content-center cardHeader">{props.name.toString().replace("-"," ").replace("-"," ").replace("-"," ")}</h3>
+          <h5>Description:</h5> 
+          <text className="textalign">{props.description}</text> 
+        </div>
+      </a>
     </div>
   );
 }

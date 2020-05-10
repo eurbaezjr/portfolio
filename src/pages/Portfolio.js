@@ -15,7 +15,15 @@ class Portfolio extends React.Component {
       gitHubUserName: "eurbaezjr",
       BackgroundImage: "https://images.pexels.com/photos/2694037/pexels-photo-2694037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
       search: "",
-      results: []
+      results: [],
+      // dummy: [{
+      //   name: "efwefwfwefwfwef",
+      //   gif: mygif,
+      //   readme: "wkewkjnfkjwenfkjwenf",
+      //   url: "https://images.pexels.com/photos/2694037/pexels-photo-2694037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      //   id: "242524",
+      //   description: "hello baby kwjnefkewjn flkwnfkw ejnfklwej nfkljw nefkjwnk lfjnwkejnfwkejnflkwengkjwnelgkjnweklgjnwkeljgnklwejngkwlenjgklwejngklewjngkljwngkljenwkgljnw"
+      // }]
     }
   }
 
@@ -153,12 +161,11 @@ class Portfolio extends React.Component {
 
       <div>
         <Hero backgroundImage={this.state.BackgroundImage}>
+          <Wrapper>
           <SearchForm
             search={this.state.search}
             handleInputChange={this.handleInputChange}
           />
-          <Wrapper>
-
             <Row>
 
               {this.state.results.map(result => (
