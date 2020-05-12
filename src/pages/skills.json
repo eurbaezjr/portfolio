@@ -1,0 +1,137 @@
+[
+    {
+        "id": 2,
+        "skill": "APIs"
+    },
+    {
+        "id": 3,
+        "skill": "HTML5"
+    },
+    {
+        "id": 4,
+        "skill": "CSS3"
+    },
+    {
+        "id": 5,
+        "skill": "ES6"
+    },
+    {
+        "id": 6,
+        "skill": "JavaScript"
+    },
+    {
+        "id": 7,
+        "skill": "SQL"
+    },
+    {
+        "id": 10,
+        "skill": "Express.js"
+    },
+    {
+        "id": 11,
+        "skill": "JQuery"
+    },
+    {
+        "id": 12,
+        "skill": "Bootstrap"
+    },
+    {
+        "id": 13,
+        "skill": "MERN"
+    },
+    {
+        "id": 14,
+        "skill": "React.js"
+    },
+    {
+        "id": 15,
+        "skill": "Sequelize.js"
+    },
+    {
+        "id": 16 ,
+        "skill": "Handlebars.js"
+    },
+    {
+        "id": 17,
+        "skill": "Axios"
+    }, 
+    {
+        "id": 18,
+        "skill": "Redux"
+    }, 
+    {
+        "id": 19,
+        "skill": "MongoDB"
+    }, 
+    {
+        "id": 20,
+        "skill": "Local Storage"
+    },
+    {
+        "id": 21,
+        "skill": "CRUD"
+    },
+    {
+        "id": 22,
+        "skill": "AJAX"
+    },
+    {
+        "id": 23,
+        "skill": "OOP"
+    },
+    {
+        "id": 24,
+        "skill": "MVC"
+    },
+    {
+        "id": 25,
+        "skill": "REST"
+    },
+    {
+        "id": 26,
+        "skill": "ORM"
+    },
+    {
+        "id": 27,
+        "skill": "Agile"
+    },
+    {
+        "id": 28,
+        "skill": "Heroku"
+    },
+    {
+        "id": 29,
+        "skill": "Git"
+    },
+    {
+        "id": 30,
+        "skill": "Terminal"
+    },
+    {
+        "id": 31,
+        "skill": "NPM/Yarn"
+    },
+    {
+        "id": 32,
+        "skill": "Webpack"
+    },
+    {
+        "id": 33,
+        "skill": "DevTools"
+    },
+    {
+        "id": 34,
+        "skill": "Chrome API"
+    },
+    {
+        "id": 35,
+        "skill": "Cyberduck"
+    },
+    {
+        "id": 36,
+        "skill": "Frontend"
+    },
+    {
+        "id": 37,
+        "skill": "Backend"
+    }]

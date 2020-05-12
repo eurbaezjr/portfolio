@@ -7,6 +7,10 @@ import Row from "../components/Row";
 import Hero from "../components/Hero";
 import AvatarIcon from "../components/AvatarIcon"
 import Col from "../components/Col";
+import mygif from "./profile-generator-demo.gif"
+import skillsJSON from "./skills"
+import SkillsContainer from "../components/SkillsContainer"
+import Container from '../components/Container';
 
 class Portfolio extends React.Component {
   constructor(props) {
@@ -16,25 +20,28 @@ class Portfolio extends React.Component {
       BackgroundImage: "https://images.pexels.com/photos/2694037/pexels-photo-2694037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
       search: "",
       results: [],
-      // dummy: [{
-      //   name: "efwefwfwefwfwef",
-      //   gif: mygif,
-      //   readme: "wkewkjnfkjwenfkjwenf",
-      //   url: "https://images.pexels.com/photos/2694037/pexels-photo-2694037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-      //   id: "242524",
-      //   description: "hello baby kwjnefkewjn flkwnfkw ejnfklwej nfkljw nefkjwnk lfjnwkejnfwkejnflkwengkjwnelgkjnweklgjnwkeljgnklwejngkwlenjgklwejngklewjngkljwngkljenwkgljnw"
-      // }]
+      skills: skillsJSON,
+      dummy: [{
+        name: "efwefwfwefwfwef",
+        gif: mygif,
+        readme: "wkewkjnfkjwenfkjwenf",
+        url: "https://images.pexels.com/photos/2694037/pexels-photo-2694037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        id: "242524",
+        description: "hello baby kwjnefkewjn flkwnfkw ejnfklwej nfkljw nefkjwnk lfjnwkejnfwkejnflkwengkjwnelgkjnweklgjnwkeljgnklwejngkwlenjgklwejngklewjngkljwngkljenwkgljnw"
+      }]
     }
+
+    this.handleClick = this.handleClick.bind(this)
   }
 
   // Start Github.API query prior DOM is ready
-  componentDidMount() {
-    this.loadGitData(this.state.gitHubUserName).then(data => {
-      console.log(data)
-      return this.setState({ results: data })
-    })
-    console.log(this.state.results)
-  }
+  // componentDidMount() {
+  //   this.loadGitData(this.state.gitHubUserName).then(data => {
+  //     console.log(data)
+  //     return this.setState({ results: data })
+  //   })
+  //   console.log(this.state.results)
+  // }
 
   // Queries gitHub API for user data on starred contents
   loadGitData = (el) => {
@@ -156,25 +163,44 @@ class Portfolio extends React.Component {
     this.setState({ results });
   };
 
+  handleClick = (e) => {
+    // Get the name of the clicked button
+    // Clone this.state to the newState object
+    // We'll modify this object and use it to set our component's state
+  return this.setState({search: e.target.name})
+  }
+
+
   render() {
     return (
 
       <div>
         <Hero backgroundImage={this.state.BackgroundImage}>
         <AvatarIcon/>
-          <Wrapper>
+       
+       
           <Row>
             <Col size="12">
           <SearchForm 
             class-name="justifiy-content-center"
             search={this.state.search}
+            value={this.state.search}
             handleInputChange={this.handleInputChange}
            />
            </Col>
           </Row>
+        <Container>
+          <Row>
+            <Col size="12">
+              <SkillsContainer skills= {this.state.skills} onClick={this.handleClick}>
+              </SkillsContainer>
+            </Col>
+          </Row>
+          </Container>
+    
             <Row>
 
-              {this.state.results.map(result => (
+              {this.state.dummy.map(result => (
                <Col key={result.id} size="xl-4 lg-6">
                 <ProjectCard
                   id={result.id}
@@ -191,12 +217,13 @@ class Portfolio extends React.Component {
               ))}
 
             </Row>
-
-          </Wrapper>
+       
+      
         </Hero>
       </div>
     )
   }
 }
+
 
 export default Portfolio
