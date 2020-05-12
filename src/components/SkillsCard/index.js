@@ -6,15 +6,10 @@ import "./style.css"
 
 function SkillsContainer(props) {
   return (
-    <div className="skills-container">
-     <Container>
-   <Row>
-  {props.children}
+  <div className="col-sm-2">
+          <button onClick={props.onClick} name={props.name} id={props.id} className="skill-card" key={props.id}> {props.name}</button>
 
-</Row>          
-
-</Container>
-    </div>
+  </div>
   );
 }
 

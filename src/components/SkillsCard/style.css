@@ -1,0 +1,38 @@
+
+.skill-card {
+  height: auto;
+  text-align: center;
+  min-height: 25px;
+  max-height: 50px;
+  max-width: 250px;
+  min-width: 150px;
+  position: relative;
+  padding: 5px;
+  overflow: hidden;
+  border-radius: 20px;
+  font-size: 25px;
+  color: white;
+  border-color: white;
+  border-width: 1px;
+  position: relative;
+  border-style: solid;
+  margin: 5px;
+  background-color:black;
+  
+}
+
+.skill-card:hover {
+background: rgb(33, 150, 243);
+
+}
+
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* a:hover {
+  text-decoration: none;
+  color: white;
+} */

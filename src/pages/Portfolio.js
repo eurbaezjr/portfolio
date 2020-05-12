@@ -11,6 +11,7 @@ import mygif from "./profile-generator-demo.gif"
 import skillsJSON from "./skills"
 import SkillsContainer from "../components/SkillsContainer"
 import Container from '../components/Container';
+import SkillsCard from '../components/SkillsCard';
 
 class Portfolio extends React.Component {
   constructor(props) {
@@ -35,13 +36,13 @@ class Portfolio extends React.Component {
   }
 
   // Start Github.API query prior DOM is ready
-  // componentDidMount() {
-  //   this.loadGitData(this.state.gitHubUserName).then(data => {
-  //     console.log(data)
-  //     return this.setState({ results: data })
-  //   })
-  //   console.log(this.state.results)
-  // }
+  componentDidMount() {
+    this.loadGitData(this.state.gitHubUserName).then(data => {
+      console.log(data)
+      return this.setState({ results: data })
+    })
+    console.log(this.state.results)
+  }
 
   // Queries gitHub API for user data on starred contents
   loadGitData = (el) => {
@@ -157,6 +158,7 @@ class Portfolio extends React.Component {
 
   // Filter for all projects based on user input data
   searchProjects = search => {
+    
     var results = this.state.results.filter((result) => {
       return result.name.toLowerCase().includes(search.toLowerCase()) !== false || result.description.toLowerCase().includes(search.toLowerCase()) !== false || result.readme.toLowerCase().includes(search.toLowerCase()) !== false
     })
@@ -164,11 +166,12 @@ class Portfolio extends React.Component {
   };
 
   handleClick = (e) => {
-    // Get the name of the clicked button
-    // Clone this.state to the newState object
-    // We'll modify this object and use it to set our component's state
-  return this.setState({search: e.target.name})
+  this.handleInputChange() // CHECK THIS AS IT COULD BREAK IT
+  // if user clicks on box, fill the search with box's contents
+  return this.searchProjects(e.target.name)
   }
+
+  
 
 
   render() {
@@ -192,16 +195,29 @@ class Portfolio extends React.Component {
         <Container>
           <Row>
             <Col size="12">
-              <SkillsContainer skills= {this.state.skills} onClick={this.handleClick}>
+              <SkillsContainer>
+
+              {this.state.skills.map( skill => (
+               <SkillsCard 
+               id={skill.id}
+               key={skill.id}
+               name={skill.skill}
+               onClick={this.handleClick}
+              >
+                {skill.name}
+              </SkillsCard>
+              ))
+              }
+
               </SkillsContainer>
             </Col>
           </Row>
           </Container>
-    
+           <Container>
             <Row>
 
-              {this.state.dummy.map(result => (
-               <Col key={result.id} size="xl-4 lg-6">
+              {this.state.results.map(result => (
+               <Col key={result.id} size="xl-6 lg-6">
                 <ProjectCard
                   id={result.id}
                   url={result.url}
@@ -217,7 +233,7 @@ class Portfolio extends React.Component {
               ))}
 
             </Row>
-       
+            </Container>
       
         </Hero>
       </div>

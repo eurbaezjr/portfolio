@@ -4,9 +4,10 @@
   min-height: 600px;
   width: auto;
   max-width: 640px;
+  max-height: 500px;
   position: relative;
   margin-top: 50px;
-  overflow: hidden;
+  overflow: scroll;
   border-radius: 40px
 }
 
