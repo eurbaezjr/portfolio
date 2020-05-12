@@ -20,16 +20,17 @@ class Portfolio extends React.Component {
       gitHubUserName: "eurbaezjr",
       BackgroundImage: "https://images.pexels.com/photos/2694037/pexels-photo-2694037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
       search: "",
+      apiResults: [],
       results: [],
       skills: skillsJSON,
-      dummy: [{
-        name: "efwefwfwefwfwef",
-        gif: mygif,
-        readme: "wkewkjnfkjwenfkjwenf",
-        url: "https://images.pexels.com/photos/2694037/pexels-photo-2694037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        id: "242524",
-        description: "hello baby kwjnefkewjn flkwnfkw ejnfklwej nfkljw nefkjwnk lfjnwkejnfwkejnflkwengkjwnelgkjnweklgjnwkeljgnklwejngkwlenjgklwejngklewjngkljwngkljenwkgljnw"
-      }]
+      // dummy: [{ // used to test layout and prevent unecessary API requests
+      //   name: "efwefwfwefwfwef",
+      //   gif: mygif,
+      //   readme: "wkewkjnfkjwenfkjwenf",
+      //   url: "https://images.pexels.com/photos/2694037/pexels-photo-2694037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      //   id: "242524",
+      //   description: "hello baby kwjnefkewjn flkwnfkw ejnfklwej nfkljw nefkjwnk lfjnwkejnfwkejnflkwengkjwnelgkjnweklgjnwkeljgnklwejngkwlenjgklwejngklewjngkljwngkljenwkgljnw"
+      // }]
     }
 
     this.handleClick = this.handleClick.bind(this)
@@ -39,7 +40,7 @@ class Portfolio extends React.Component {
   componentDidMount() {
     this.loadGitData(this.state.gitHubUserName).then(data => {
       console.log(data)
-      return this.setState({ results: data })
+      return this.setState({ results: data, apiResults: data })
     })
     console.log(this.state.results)
   }
@@ -140,39 +141,31 @@ class Portfolio extends React.Component {
   // As user inputs information on the search form, set the state and trigger SearchProjects
   handleInputChange = event => {
     event.preventDefault();
-    this.loadGitData(this.state.gitHubUserName).then(data => {
-      console.log(data)
-      return this.setState({ results: data })
-    })
-
     const name = event.target.name
     const value = event.target.value
     this.setState({
       [name]: value
     });
-    event.preventDefault();
     setTimeout(() => {
       return this.searchProjects(this.state.search);
     }, 1000)
   }
 
   // Filter for all projects based on user input data
-  searchProjects = search => {
+  searchProjects = async search => {
+    this.setState({search:search})
     
-    var results = this.state.results.filter((result) => {
+    var results = await this.state.apiResults.filter((result) => {
       return result.name.toLowerCase().includes(search.toLowerCase()) !== false || result.description.toLowerCase().includes(search.toLowerCase()) !== false || result.readme.toLowerCase().includes(search.toLowerCase()) !== false
     })
-    this.setState({ results });
+    this.setState({ results : results });
   };
 
   handleClick = (e) => {
-  this.handleInputChange() // CHECK THIS AS IT COULD BREAK IT
-  // if user clicks on box, fill the search with box's contents
+  this.handleInputChange(e) 
+  // if user clicks on box, trigger search 
   return this.searchProjects(e.target.name)
   }
-
-  
-
 
   render() {
     return (

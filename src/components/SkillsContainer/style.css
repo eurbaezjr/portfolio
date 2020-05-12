@@ -1,16 +1,30 @@
 .skills-container {
  
   height: auto;
-  min-height: 170px;
+  min-height: 135px;
   width: 100%;
   position: relative;
   overflow: scroll;
   border-radius: 40px;
-  margin-top: 50px;
-  max-height: 170px;
+  margin-top: 30px;
+  padding: 15px;
+  max-height: 135px;
   border-style: solid;
-  border-color: rgb(33, 150, 243);
+  border-width: 1px;
+  border-color: white;
   justify-content: center;
 
 }
 
+.skills-container:hover {
+  box-shadow: 15px 15px 15px black;
+}
+
+#quick-search {
+  margin-bottom: 0;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 25px;
+}

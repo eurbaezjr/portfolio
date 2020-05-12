@@ -17,13 +17,13 @@
   position: relative;
   border-style: solid;
   margin: 5px;
-  background-color:black;
+  background: rgb(33, 150, 243);
   
 }
 
 .skill-card:hover {
-background: rgb(33, 150, 243);
-
+background: red;
+box-shadow: 15px 15px 15px black;
 }
 
 
@@ -32,7 +32,14 @@ a {
   color: white;
 }
 
-/* a:hover {
+a:hover {
   text-decoration: none;
   color: white;
-} */
+}
+
+@media only screen and (max-width: 991px) {
+  .skill-card {
+    font-size: 15px;
+    margin: 0;
+  }
+}

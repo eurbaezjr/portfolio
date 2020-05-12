@@ -16,7 +16,7 @@ class Experience extends Component {
 
   componentDidMount() {
   setTimeout(() => { this.setState({ 
-    subtitle: "Web Developer & Data Marketer", 
+    subtitle: "Full-Stack Web Developer & Programmatic Data Marketer", 
     title: "Eduardo Urbaez", 
     timeline:<MyVerticalTimeline/> 
   }) }, 1000)}

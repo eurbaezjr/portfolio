@@ -21,7 +21,8 @@ font-size: 30px;
 
 #search {
   font-size: 30px;
-  text-align: center;
+  text-align: left;
+  text-indent: 40px;
   border-radius: 40px;
   z-index: -2;
 }
@@ -33,4 +34,11 @@ font-size: 30px;
   margin-top: 20px;
   width: 30px;
   height: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  form {
+    min-width: auto;
+    max-width: auto;
+  }
 }

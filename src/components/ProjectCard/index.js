@@ -6,7 +6,7 @@ function ProjectCard(props) {
     <div className="card" id={props.id}>
       <a href={props.url}>
         <div className="img-container">
-          <img alt={props.name} src={props.image} height="300px" width="650px"/>
+          <img className="gifs" alt={props.name} src={props.image} height="250px" width="650px"/>
         </div>
         <div className="content">
         <h3 className="justify-content-center cardHeader">{props.name.toString().replace(/-/g," ")}</h3>

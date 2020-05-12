@@ -6,14 +6,17 @@ import "./style.css"
 
 function SkillsContainer(props) {
   return (
+    <div>
     <div className="skills-container">
      <Container>
+     <h1 id="quick-search">Quick Search Scroller</h1>
    <Row>
   {props.children}
 
 </Row>          
 
 </Container>
+    </div>
     </div>
   );
 }

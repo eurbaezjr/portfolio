@@ -5,6 +5,7 @@ import Portfolio from "./pages/Portfolio";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
+import Contact from "./pages/Contact"
 
 function App() {
   
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/" component={Experience} />
           <Route exact path="/experience" component={Experience} />
           <Route exact path="/portfolio" component={Portfolio} />
+          <Route exact path="/contact" component={Contact} />
         </Wrapper>
         <Footer />
       </div>

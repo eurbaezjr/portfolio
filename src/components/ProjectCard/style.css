@@ -1,5 +1,4 @@
 .card {
-  background: rgb(33, 150, 243);
   height: auto;
   min-height: 600px;
   width: auto;
@@ -7,8 +6,12 @@
   max-height: 500px;
   position: relative;
   margin-top: 50px;
-  overflow: scroll;
-  border-radius: 40px
+  overflow: hidden;
+  border-radius: 40px;
+  border: solid;
+  border-width: 1px;
+  border-color: white;
+  background-color: rgb(33, 150, 243);;
 }
 
 .card > .img-container {
@@ -26,7 +29,8 @@ width: 100%;
 
 .cardHeader {
   font-size: 40px;
-  padding-top: 10px;
+  padding: 10px;
+  margin-top: 0;
 }
 
 a {
@@ -62,4 +66,10 @@ padding-bottom: 0;
 
 h3 {
   margin-top: 10px;
+}
+
+.card:hover {
+  box-shadow: 15px 15px 15px black;
+  background: red;
+  overflow: scroll;
 }
