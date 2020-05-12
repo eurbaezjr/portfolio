@@ -4,9 +4,9 @@ import SearchForm from "../components/SearchForm";
 import ProjectCard from "../components/ProjectCard";
 import Wrapper from "../components/Wrapper";
 import Row from "../components/Row";
-import Hero from "../components/Hero"
+import Hero from "../components/Hero";
+import AvatarIcon from "../components/AvatarIcon"
 import Col from "../components/Col";
-import mygif from "./profile-generator-demo.gif"
 
 class Portfolio extends React.Component {
   constructor(props) {
@@ -161,15 +161,21 @@ class Portfolio extends React.Component {
 
       <div>
         <Hero backgroundImage={this.state.BackgroundImage}>
+        <AvatarIcon/>
           <Wrapper>
-          <SearchForm
+          <Row>
+            <Col size="12">
+          <SearchForm 
+            class-name="justifiy-content-center"
             search={this.state.search}
             handleInputChange={this.handleInputChange}
-          />
+           />
+           </Col>
+          </Row>
             <Row>
 
               {this.state.results.map(result => (
-
+               <Col key={result.id} size="xl-4 lg-6">
                 <ProjectCard
                   id={result.id}
                   url={result.url}
@@ -180,6 +186,7 @@ class Portfolio extends React.Component {
                 >
                   {result.readme}
                 </ProjectCard>
+                </Col>
 
               ))}
 
