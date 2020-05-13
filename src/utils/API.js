@@ -9,7 +9,7 @@ export default {
     );
   },
   getReposContent: function(fullRepoName) {
-    return axios.get("http://api.github.com/repos/" + fullRepoName + "/contents"
+    return axios.get("https://api.github.com/repos/" + fullRepoName + "/contents"
     );
   }
 };
