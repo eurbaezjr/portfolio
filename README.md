@@ -11,7 +11,7 @@ A frontend application that programmatically sorts and gets data from Github's A
 *  Portfolio Page: user is able to sort through content by using the search bar or by clicking the items in the scrollable menu. Then all repositories that match the search will populate instantly. Recruiting managers can then click on any of the result cards to be redirected to the Github repository that holds the source code. 
 
 
-## Installing Instructions
+## Installation Instructions
 
 * In the `Root` of the repository there is a `package.json`, so make sure to `npm install` in your terminal or your command line program.
 
