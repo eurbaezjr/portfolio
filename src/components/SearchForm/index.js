@@ -15,7 +15,7 @@ function SearchForm(props) {
           name="search"
           type="text"
           className="form-control"
-          placeholder="Search accross all my projects"
+          placeholder="Search all Github projects or use scrolldown menu"
           id="search"
         />
    

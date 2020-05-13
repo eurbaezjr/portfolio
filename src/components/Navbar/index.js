@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 import { withRouter } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 function Navbar() {
@@ -14,13 +18,13 @@ function Navbar() {
         <ul className="navbar-nav">
           <li className="nav-item">
             <Link
-              to="/experience"
+              to="/about"
               className={
-               window.location.pathname === "/experience" || window.location.pathname === "/"
+               window.location.pathname === "/about" || window.location.pathname === "/"
                   ? "nav-link active": "nav-link"
               }
             >
-              Experience
+              About
             </Link>
           </li>
           <li className="nav-item">
@@ -46,6 +50,27 @@ function Navbar() {
             >
               Contact
             </Link>
+          </li>
+          <li className="contact-1">
+          <a
+              href="mailto:eurbaezjr@gmail.com"
+            >
+          <FontAwesomeIcon icon={faEnvelope} className="icons"/>
+           </a>
+          </li>
+          <li className="contact-2">
+          <a
+              href="https://www.linkedin.com/in/eurbaez/"
+            >
+          <FontAwesomeIcon icon={faLinkedin} className="icons"/>
+           </a>
+          </li>
+          <li className="contact-3">
+          <a
+              href="https://github.com/eurbaezjr"
+            >
+          <FontAwesomeIcon icon={faGithub} className="icons"/>
+           </a>
           </li>
         </ul>
       </div>

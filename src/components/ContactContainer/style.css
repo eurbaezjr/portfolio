@@ -1,25 +1,38 @@
-.contact-container {
+.contact-contain {
  
-    min-height: 135px;
+    height: auto;
+    min-height: 300px;
     width: 100%;
     position: relative;
+    overflow: scroll;
     border-radius: 40px;
-    max-height: 135px;
+    margin-top: 100px;
+    padding: 15px;
+    max-height: 300px;
     border-style: solid;
     border-width: 1px;
     border-color: white;
-  
   }
   
-  .contact-container:hover {
+  .contact-contain:hover {
     box-shadow: 15px 15px 15px black;
   }
   
-  .contact-header {
-  text-align: center;
-  
+  #contact-children {
+    margin-bottom: 0;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 25px;
+  }
+
+  .contactMe {
+      padding: 20px;
+      font-size: 20px;
+  }
+
+  .icons {
+      color: white;
+      font-size: 40px;
   }
   
-  .contact-children {
-    text-align: left;
-  }

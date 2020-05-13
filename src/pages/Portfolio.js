@@ -158,6 +158,7 @@ class Portfolio extends React.Component {
     var results = await this.state.apiResults.filter((result) => {
       return result.name.toLowerCase().includes(search.toLowerCase()) !== false || result.description.toLowerCase().includes(search.toLowerCase()) !== false || result.readme.toLowerCase().includes(search.toLowerCase()) !== false
     })
+
     this.setState({ results : results });
   };
 
@@ -174,7 +175,7 @@ class Portfolio extends React.Component {
         <Hero backgroundImage={this.state.BackgroundImage}>
         <AvatarIcon/>
        
-       
+        <Container>
           <Row>
             <Col size="12">
           <SearchForm 
@@ -185,7 +186,7 @@ class Portfolio extends React.Component {
            />
            </Col>
           </Row>
-        <Container>
+       
           <Row>
             <Col size="12">
               <SkillsContainer>

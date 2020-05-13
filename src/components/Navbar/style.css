@@ -2,10 +2,74 @@ nav.navbar.navbar-default {
   margin-bottom: 0;
 }
 
-.navbar {
+.nav-item {
   font-size: 25px;
 }
 
 .navbar-brand {
   font-size: 30px;
+}
+
+.contact-1 {
+    z-index: 1;
+    position: absolute;
+    right: 115px;
+    top: -2px;
+    margin-top: 20px;
+    width: 30px;
+    height: 20px;
+    font-size: 20px;
+}
+
+.contact-2 {
+  z-index: 1;
+  position: absolute;
+  right: 165px;
+  top: -2px;
+  margin-top: 20px;
+  width: 30px;
+  height: 20px;
+}
+
+.contact-3 {
+  z-index: 1;
+  position: absolute;
+  right: 63px;
+  top: -2px;
+  margin-top: 20px;
+  width: 30px;
+  height: 20px;
+}
+
+@media only screen and (max-width: 990px) {
+  .contact-1 {
+    z-index: 1;
+    position: absolute;
+    right: 370px;
+    top: -2px;
+    margin-top: 20px;
+    width: 30px;
+    height: 20px;
+    font-size: 20px;
+}
+
+.contact-2 {
+  z-index: 1;
+  position: absolute;
+  right: 300px;
+  top: -2px;
+  margin-top: 20px;
+  width: 30px;
+  height: 20px;
+}
+
+.contact-3 {
+  z-index: 1;
+  position: absolute;
+  right: 440px;
+  top: -2px;
+  margin-top: 20px;
+  width: 30px;
+  height: 20px;
+}
 }

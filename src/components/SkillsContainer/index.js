@@ -7,15 +7,11 @@ import "./style.css"
 function SkillsContainer(props) {
   return (
     <div>
-    <div className="skills-container">
-     <Container>
-     <h1 id="quick-search">Quick Search Scroller</h1>
-   <Row>
+    <div className="skills-container container">
+   <div className="row">
   {props.children}
 
-</Row>          
-
-</Container>
+</div>          
     </div>
     </div>
   );
