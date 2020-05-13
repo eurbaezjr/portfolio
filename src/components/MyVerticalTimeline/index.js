@@ -17,14 +17,16 @@ contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
 contentArrowStyle={{ borderRight: '13px solid  rgb(33, 150, 243)' }}
 date={e.date}
 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff', overflow: 'hidden', width:'auto', height:'auto', position:'center' }}
-icon={<img src={e.icon} width='70px' height='70px' alt={e.icon}/>}
+icon={<a href={e.orgLink}><img src={e.icon} width='70px' height='70px' alt={e.icon}/></a>}
 key={e.id}
 >
+<a href={e.orgLink}> 
 <h3 className="vertical-timeline-element-title">{e.title}</h3>
 <h4 className="vertical-timeline-element-subtitle">{e.org}</h4>
 <p>
   {e.description}
 </p>
+</a>  
 </VerticalTimelineElement>
 )
 )}

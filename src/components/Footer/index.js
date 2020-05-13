@@ -4,7 +4,7 @@ import "./style.css";
 function Footer() {
   return (
     <footer className="footer">
-      <span> &copy; Eduardo Urbaez 2020</span>
+      <span> &copy; Developed by Eduardo Urbaez 2020</span>
     </footer>
   );
 }
