@@ -11,16 +11,16 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark" >
-      <Link className="navbar-brand" to="/">
+      <Link className="navbar-brand" to="/portfolio">
         EU
       </Link>
       <div>
         <ul className="navbar-nav">
           <li className="nav-item">
             <Link
-              to="/about"
+              to="/portfolio/about"
               className={
-               window.location.pathname === "/about" || window.location.pathname === "/"
+               window.location.pathname === "/portfolio/about" || window.location.pathname === "/portfolio"
                   ? "nav-link active"
                   : "nav-link"
               }
@@ -30,21 +30,21 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <Link
-              to="/portfolio"
+              to="/portfolio/projects"
               className={
-                window.location.pathname === "/portfolio" 
+                window.location.pathname === "/portfolio/projects" 
               ? "nav-link active" 
               : "nav-link"
             }
             >
-              Portfolio
+              Projects
             </Link>
           </li>
           <li className="nav-item">
             <Link
-              to="/contact"
+              to="/portfolio/contact"
               className={
-                window.location.pathname === "/contact" 
+                window.location.pathname === "/portfolio/contact" 
               ? "nav-link active" 
               : "nav-link"
             }

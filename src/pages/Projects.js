@@ -13,7 +13,7 @@ import SkillsContainer from "../components/SkillsContainer"
 import Container from '../components/Container';
 import SkillsCard from '../components/SkillsCard';
 
-class Portfolio extends React.Component {
+class Projects extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -236,4 +236,4 @@ class Portfolio extends React.Component {
 }
 
 
-export default Portfolio
+export default Projects
