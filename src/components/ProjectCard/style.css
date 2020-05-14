@@ -1,22 +1,29 @@
 .card {
   height: auto;
-  min-height: 600px;
+  min-height: 650px;
   width: auto;
-  max-width: 640px;
-  max-height: 500px;
+  max-width: auto;
+  max-height: auto;
   position: relative;
   margin-top: 50px;
   overflow: hidden;
   border-radius: 40px;
   border: solid;
   border-width: 1px;
-  border-color: white;
-  background-color: rgb(33, 150, 243);;
+  background-color: white;  
+  opacity: 95%;
 }
+
 
 .card > .img-container {
   height: 50%;
   overflow: hidden;
+  border-radius: 0px;
+  background-color: rgb(233, 233, 233);
+  border-radius: 40px;
+  border: solid black;
+  border-width: 1px;
+  box-shadow: 15px 15px 15px black;
 }
 .card > .img-container > img {
   height: 100%;
@@ -25,17 +32,25 @@ max-width: 100%;
 max-height: 100%;
 width: 100%;
   overflow: hidden;  
+  image-rendering: optimizeQuality;
+  
 }
 
 .cardHeader {
-  font-size: 40px;
+  font-size: 30px;
   padding: 10px;
-  margin-top: 0;
+  margin-top: 0px;
+  color: black;
+  border: rgb(233, 233, 233) 1px;
+  text-align: left;
+  background-color: rgb(233, 233, 233);
+  padding-left: 20px;
+
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 br {
@@ -44,24 +59,30 @@ br {
 
 text {
   display: block;
-  padding: 0;
   width: 100%;
   min-height: 80px;
-  height: 100%;
-  color: white;
+  color: black;
   text-align: left;
   font-weight: 200;
   font-size: 25px;
   padding: 20px;
+  margin-top: 0;
   overflow-wrap: break-word;
+  overflow-y: scroll;
 }
 
-h5 {
+
+#description {
   font-weight: 300; 
-font-style: italic;   
 margin-bottom: 0;
 padding-bottom: 0;
-  font-size: 30px;
+  font-size: 26px;
+   margin-top: 20px;
+   font-style: italic;   
+   text-underline-position: below;
+   color: black;
+   text-align: left;
+   padding-left: 20px;
 }
 
 h3 {
@@ -70,6 +91,6 @@ h3 {
 
 .card:hover {
   box-shadow: 15px 15px 15px black;
-  background: red;
   overflow: scroll;
 }
+

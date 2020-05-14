@@ -189,7 +189,7 @@ class Portfolio extends React.Component {
        
           <Row>
             <Col size="12">
-              <SkillsContainer>
+              {/* <SkillsContainer>
 
               {this.state.skills.map( skill => (
                <SkillsCard 
@@ -203,7 +203,7 @@ class Portfolio extends React.Component {
               ))
               }
 
-              </SkillsContainer>
+              </SkillsContainer> */}
             </Col>
           </Row>
           </Container>
@@ -211,7 +211,7 @@ class Portfolio extends React.Component {
             <Row>
 
               {this.state.results.map(result => (
-               <Col key={result.id} size="xl-6 lg-6">
+               <Col key={result.id} size="xl-12 lg-12">
                 <ProjectCard
                   id={result.id}
                   url={result.url}

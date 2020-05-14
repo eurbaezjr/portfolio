@@ -21,7 +21,8 @@ function Navbar() {
               to="/about"
               className={
                window.location.pathname === "/about" || window.location.pathname === "/"
-                  ? "nav-link active": "nav-link"
+                  ? "nav-link active"
+                  : "nav-link"
               }
             >
               About
