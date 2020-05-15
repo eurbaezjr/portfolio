@@ -5,7 +5,7 @@ import AnimeSubHeader from "../components/AnimeSubHeader"
 import AvatarIcon from "../components/AvatarIcon"
 import MyVerticalTimeline from "../components/MyVerticalTimeline"
 
-class Experience extends Component {
+class Home extends Component {
 
   state = {
     title: "",
@@ -36,4 +36,4 @@ class Experience extends Component {
   }
 }
 
-export default Experience;
+export default Home;

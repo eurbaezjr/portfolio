@@ -15,14 +15,14 @@ function Navbar() {
         <ul className="navbar-nav">
           <li className="nav-item">
             <Link
-              to="/portfolio/about"
+              to="/portfolio/home"
               className={
-               window.location.pathname === "/portfolio/about" || window.location.pathname === "/portfolio"
+               window.location.pathname === "/portfolio/home" || window.location.pathname === "/portfolio"
                   ? "nav-link active"
                   : "nav-link"
               }
             >
-              About
+              Home
             </Link>
           </li>
           <li className="nav-item">
