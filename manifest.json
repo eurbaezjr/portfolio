@@ -1,11 +1,26 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Eduardo Urbaez Portfolio",
+  "name": "Eduardo Urbaez FullStack Portfolio",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "64x64",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "32x32",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "24x24",
+      "sizes": "24x24",
+      "type": "image/png"
+    },
+    {
+      "src": "16x16",
+      "sizes": "16x16",
+      "type": "image/png"
     },
     {
       "src": "logo192.png",
