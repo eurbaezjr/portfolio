@@ -14,6 +14,10 @@ form {
 
 }
 
+input:hover {
+  box-shadow: 15px 15px 15px black;
+}
+
 label {
 color: white;
 font-size: 30px;

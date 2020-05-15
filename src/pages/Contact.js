@@ -25,7 +25,7 @@ class Contact extends React.Component {
                 <Col size="12">
                 <div className="contactMe">
                 <FontAwesomeIcon icon={faEnvelope} className="icons"/>
-                <a href="mailto:eurbaezjr@gmail.com"> eurbaezjr@gmail.com </a>
+                <a href="mailto:eurbaezjr@gmail.com" text-decoration="none" style={{color:"white"}} target="_blank" rel="noopener noreferrer"> eurbaezjr@gmail.com </a>
                 </div>  
                 </Col>
               </Row>
@@ -33,7 +33,7 @@ class Contact extends React.Component {
                 <Col size="12">
                 <div className="contactMe">
                 <FontAwesomeIcon icon={faLinkedin} className="icons"/>
-                <a href="https://www.linkedin.com/in/eurbaez/"> www.linkedin.com/in/eurbaez/ </a>
+                <a href="https://www.linkedin.com/in/eurbaez/" text-decoration="none" style={{color:"white"}} target="_blank" rel="noopener noreferrer"> www.linkedin.com/in/eurbaez/ </a>
                 </div>  
                 </Col>
               </Row>
@@ -41,7 +41,7 @@ class Contact extends React.Component {
                 <Col size="12">
                 <div className="contactMe">
                 <FontAwesomeIcon icon={faGithub} className="icons"/>
-                <a href="https://github.com/eurbaezjr"> www.github.com/eurbaezjr </a>
+                <a href="https://github.com/eurbaezjr" text-decoration="none" style={{color:"white"}} target="_blank" rel="noopener noreferrer"> www.github.com/eurbaezjr </a>
                 </div> 
                 </Col>
               </Row>

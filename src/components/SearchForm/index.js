@@ -17,7 +17,8 @@ function SearchForm(props) {
           className="form-control"
           placeholder="Search all Github projects"
           id="search"
-        />
+        > 
+        </input>
    
       </div>
     </form>

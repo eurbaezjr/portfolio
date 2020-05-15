@@ -11,9 +11,6 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark" >
-      <Link className="navbar-brand" to="/portfolio">
-        EU
-      </Link>
       <div>
         <ul className="navbar-nav">
           <li className="nav-item">
@@ -54,6 +51,8 @@ function Navbar() {
           </li>
           <li className="contact-1">
           <a
+              target="_blank" 
+              rel="noopener noreferrer"
               href="mailto:eurbaezjr@gmail.com"
             >
           <FontAwesomeIcon icon={faEnvelope} className="icons"/>
@@ -61,6 +60,8 @@ function Navbar() {
           </li>
           <li className="contact-2">
           <a
+              target="_blank" 
+              rel="noopener noreferrer"
               href="https://www.linkedin.com/in/eurbaez/"
             >
           <FontAwesomeIcon icon={faLinkedin} className="icons"/>
@@ -68,6 +69,8 @@ function Navbar() {
           </li>
           <li className="contact-3">
           <a
+              target="_blank" 
+              rel="noopener noreferrer"
               href="https://github.com/eurbaezjr"
             >
           <FontAwesomeIcon icon={faGithub} className="icons"/>

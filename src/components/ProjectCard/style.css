@@ -1,6 +1,5 @@
 .card {
   height: auto;
-  min-height: 650px;
   width: auto;
   max-width: auto;
   max-height: auto;
@@ -21,7 +20,9 @@
   border: solid black;
   border-width: 1px;
   box-shadow: 15px 15px 15px black;
+  display: block;
 }
+
 .card > .img-container > img {
   height: 100%;
 box-sizing: border-box;
@@ -29,13 +30,13 @@ max-width: 100%;
 max-height: 100%;
 width: 100%;
   overflow: hidden;  
-  
+  padding: 20px;
 }
 
 .cardHeader {
-  font-size: 30px;
+  font-size: 24px;
   padding: 10px;
-  margin-top: 0px;
+  margin-top: 5px;
   color: black;
   border: rgb(233, 233, 233) 1px;
   text-align: left;
@@ -47,10 +48,6 @@ width: 100%;
 a {
   text-decoration: none;
   color: black;
-}
-
-br {
-  height: 5px;
 }
 
 text {
@@ -70,14 +67,14 @@ text {
 
 #description {
   font-weight: 300; 
-margin-bottom: 0;
-padding-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
   font-size: 26px;
-   margin-top: 20px;
-   font-style: italic;   
-   color: black;
-   text-align: left;
-   padding-left: 20px;
+  margin-top: 20px;
+  font-style: italic;   
+  color: black;
+  text-align: left;
+  padding-left: 20px;
 }
 
 h3 {
@@ -89,3 +86,9 @@ h3 {
   overflow: scroll;
 }
 
+br {
+display: block;
+height: 10px;
+background-color: green;
+border: rgb(233, 233, 233) 1px;
+}

@@ -2,16 +2,12 @@ import React from 'react';
 import API from "../utils/API";
 import SearchForm from "../components/SearchForm";
 import ProjectCard from "../components/ProjectCard";
-import Wrapper from "../components/Wrapper";
 import Row from "../components/Row";
 import Hero from "../components/Hero";
 import AvatarIcon from "../components/AvatarIcon"
 import Col from "../components/Col";
-import mygif from "./profile-generator-demo.gif"
 import skillsJSON from "./skills"
-import SkillsContainer from "../components/SkillsContainer"
 import Container from '../components/Container';
-import SkillsCard from '../components/SkillsCard';
 
 class Projects extends React.Component {
   constructor(props) {
@@ -22,15 +18,7 @@ class Projects extends React.Component {
       search: "",
       apiResults: [],
       results: [],
-      skills: skillsJSON,
-      // dummy: [{ // used to test layout and prevent unecessary API requests
-      //   name: "efwefwfwefwfwef",
-      //   gif: mygif,
-      //   readme: "wkewkjnfkjwenfkjwenf",
-      //   url: "https://images.pexels.com/photos/2694037/pexels-photo-2694037.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-      //   id: "242524",
-      //   description: "hello baby kwjnefkewjn flkwnfkw ejnfklwej nfkljw nefkjwnk lfjnwkejnfwkejnflkwengkjwnelgkjnweklgjnwkeljgnklwejngkwlenjgklwejngklewjngkljwngkljenwkgljnw"
-      // }]
+      skills: skillsJSON
     }
 
     this.handleClick = this.handleClick.bind(this)
@@ -82,6 +70,7 @@ class Projects extends React.Component {
       .then(res => {
         let gif = ""
         res.data.map(el => {
+
           try {
             if (el.url.includes(".gif") === true) {
               return gif = this.cdnModify(el.download_url)
@@ -91,7 +80,7 @@ class Projects extends React.Component {
             }
           }
           catch (err) {
-            console.log(err)
+            return console.log(err)
           }
         })
         console.log(gif)
@@ -101,8 +90,7 @@ class Projects extends React.Component {
 
   // Searches repository for readme file
   loadReadMe = (e) => {
-    return API.getReposContent(e.full_name)
-      .then(res => {
+    return API.getReposContent(e.full_name).then(res => {
         let readme = ""
         res.data.map(el => {
           try {
@@ -112,7 +100,7 @@ class Projects extends React.Component {
             }
           }
           catch (err) {
-            console.log(err)
+           return console.log(err)
           }
         })
         return readme
@@ -127,8 +115,8 @@ class Projects extends React.Component {
         return response.text();
       })
   }
-  // Routes files through content delivery network (CDN)
 
+  // Routes files through content delivery network (CDN)
   cdnModify = (link) => {
     // Prior modify https://raw.githubusercontent.com/eurbaezjr/day-scheduler/master/day-scheduler.gif
     // After modify https://cdn.jsdelivr.net/gh/eurbaezjr/day-scheduler/day-scheduler.gif
@@ -185,26 +173,6 @@ class Projects extends React.Component {
             handleInputChange={this.handleInputChange}
            />
            </Col>
-          </Row>
-       
-          <Row>
-            <Col size="12">
-              {/* <SkillsContainer>
-
-              {this.state.skills.map( skill => (
-               <SkillsCard 
-               id={skill.id}
-               key={skill.id}
-               name={skill.skill}
-               onClick={this.handleClick}
-              >
-                {skill.name}
-              </SkillsCard>
-              ))
-              }
-
-              </SkillsContainer> */}
-            </Col>
           </Row>
           </Container>
            <Container>
