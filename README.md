@@ -4,6 +4,8 @@
 
 A frontend application that programmatically sorts and gets data from Github's API as work is starred. Application was built using HTML5, ES6, React.js, Axios, Bootstrap, Anime.Js and other react component libraries. Custom algorithm sorts and fetches the data automatically allowing user to browse through my starred repositories with ease. 
 
+Click [Here](http://eurbaezjr.github.io/portfolio) to view the deployed application.
+
 ## Functionality
 
 * About Page: user is greeted with animated components, then work and education experience populates as user scrolls down.
