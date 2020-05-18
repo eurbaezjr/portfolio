@@ -27,3 +27,9 @@ h2 {
      font-size: 40px;
   }
   }
+
+  @media screen and (min-width: 828px) {
+    .letters {
+      font-size: 60px;
+    }
+  } 

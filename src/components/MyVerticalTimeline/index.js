@@ -25,7 +25,7 @@ key={e.id}
 
 <h3 className="vertical-timeline-element-title">{e.title}</h3>
 <h4 className="vertical-timeline-element-subtitle">{e.org}</h4>
-<p>
+<p className="vertical-paragraph">
   {e.description}
 </p>
 
