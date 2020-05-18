@@ -1,14 +1,70 @@
 .ml15 {
     font-weight: 800;
-    font-size: 3.8em;
     text-transform: uppercase;
-    letter-spacing: 0.5em;
-  }
-  
-  .ml15 .word {
+    letter-spacing: 0.25em;
+    margin-bottom: 40px;
+    margin-top: 60px;
     display: inline-block;
+    color: white;
   }
 
-h1 {
-  color: white;
+  @media only screen and (max-width: 415px) {
+    .ml15 {
+   text-transform: none;
+   letter-spacing: 0;
+   margin-top: 20px;
+   margin-bottom: 15px;
+  }
+  .word {
+    font-size: 35px;
+    margin-left: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    display: inline-block;
+    color: white;
+ }
+
+  }
+
+@media only screen and (min-width: 416px) {
+  .ml15 {
+   text-transform: none;
+   letter-spacing: 0;
+}
+}
+
+@media only screen and (min-width: 827px) {
+  .ml15 {
+    font-size: 30px;
+  }
+  .word {
+    letter-spacing: 0.05em;
+  }
+} 
+
+@media only screen and (max-width: 1200px) {
+  .ml15 {
+    font-size: 60px;
+ }
+ .word {
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+ 
+}
+
+@media only screen and (min-width: 1201px) {
+  .word {
+    font-size: 50px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    display: inline-block;
+    color: white;
+ }
 }

@@ -3,20 +3,27 @@
   font-size: 4em;
 }
 
-.ml9 .text-wrapper {
-  display: inline-block;
-  padding-right: 0.05em;
-  padding-bottom: 0.1em;
-  overflow: hidden;
-}
-
 h2 {
   color: white;
-  font-size: 60px;
+  font-size: 30px;
+  padding: 0px;
+  margin: 0px;
 }
 
 @media screen and (max-width: 827px) {
-    .letter {
-      font-size: 55px;
+    .letters {
+      font-size: 50px;
     }
   } 
+
+  @media only screen and (min-width: 415px) {
+    .letters {
+     font-size: 45px;
+  }
+  }
+  
+  @media only screen and (max-width: 320px) {
+    .letters {
+     font-size: 40px;
+  }
+  }

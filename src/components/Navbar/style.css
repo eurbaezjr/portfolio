@@ -73,3 +73,69 @@ nav.navbar.navbar-default {
   height: 20px;
 }
 }
+
+@media only screen and (max-width: 415px) {
+  .contact-1 {
+    z-index: 1;
+    position: absolute;
+    right: 70px;
+    top: -2px;
+    margin-top: 20px;
+    width: 30px;
+    height: 20px;
+    font-size: 20px;
+}
+
+.contact-2 {
+  z-index: 1;
+  position: absolute;
+  right: 20px;
+  top: -2px;
+  margin-top: 20px;
+  width: 30px;
+  height: 20px;
+}
+
+.contact-3 {
+  z-index: 1;
+  position: absolute;
+  right: 120px;
+  top: -2px;
+  margin-top: 20px;
+  width: 30px;
+  height: 20px;
+}
+}
+
+@media only screen and (max-width: 1200px) {
+  .contact-1 {
+    z-index: 1;
+    position: absolute;
+    right: 80px;
+    top: -2px;
+    margin-top: 20px;
+    width: 30px;
+    height: 20px;
+    font-size: 20px;
+}
+
+.contact-2 {
+  z-index: 1;
+  position: absolute;
+  right: 20px;
+  top: -2px;
+  margin-top: 20px;
+  width: 30px;
+  height: 20px;
+}
+
+.contact-3 {
+  z-index: 1;
+  position: absolute;
+  right: 140px;
+  top: -2px;
+  margin-top: 20px;
+  width: 30px;
+  height: 20px;
+}
+}

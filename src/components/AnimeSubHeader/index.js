@@ -16,10 +16,8 @@ function AnimeSubHeader(props) {
         <div>
             <Anime {...animeProps} className='heroSubHeader'>
             <h2 className="ml9">
-                <span className="text-wrapper">
                     <span className="letters">
                         {props.children}
-                </span>
                 </span>
             </h2>
             </Anime>

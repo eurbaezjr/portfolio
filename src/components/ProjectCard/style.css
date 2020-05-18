@@ -65,7 +65,7 @@ text {
 }
 
 
-#description {
+.description {
   font-weight: 300; 
   margin-bottom: 0;
   padding-bottom: 0;
@@ -89,6 +89,42 @@ h3 {
 br {
 display: block;
 height: 10px;
-background-color: green;
 border: rgb(233, 233, 233) 1px;
 }
+
+@media only screen and (max-width: 787px) {
+  .gifs{
+    width: 400px;
+  }
+} 
+
+@media only screen and (max-width: 439px) {
+  .gifs{
+    width: 280px;
+    height: 220px;
+  }
+ text {
+   font-size: 15px;
+   margin-top: 0px;
+   padding-top: 0px;
+ }
+
+ .card { 
+   margin: 15px;
+ }
+ 
+ .clickImage {
+   font-size: 12px;
+ }
+
+ .description {
+   font-size: 18px;
+   margin-top: 5px;
+   margin-bottom: 5px;
+ }
+
+ .cardHeader {
+   font-size: 20px;
+ }
+
+} 

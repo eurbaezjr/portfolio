@@ -40,9 +40,20 @@ font-size: 30px;
   height: 20px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 479px) {
   form {
     min-width: auto;
     max-width: auto;
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  form {
+    min-width: auto;
+    max-width: auto;
+    margin-top: 60px;
+    margin-bottom: -10px;
   }
 }
