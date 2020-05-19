@@ -73,7 +73,7 @@ class Projects extends React.Component {
 
           try {
             if (el.url.includes(".gif") === true) {
-              return gif = this.cdnModify(el.download_url)
+              return gif = el.download_url
             }
             else {
               return ""
