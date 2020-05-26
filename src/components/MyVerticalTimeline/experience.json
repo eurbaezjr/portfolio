@@ -50,7 +50,7 @@
         "orgLink": "https://www.brandgarten.com/"
     },
     {
-        "id": 7,
+        "id": 6,
         "title": "B.S, Science Communication",
         "date": "2015",
         "org": "University of Wisconsin - Madison",
@@ -60,7 +60,7 @@
         "orgLink": "https://www.wisc.edu/"
     },
     {
-        "id": 6,
+        "id": 7,
         "title": "Software Trainer",
         "date": "2012",
         "org": "University of Wisconsin - Madison",
@@ -68,5 +68,25 @@
         "description": "Taught students to use Microsoft Office, Adobe Creative Suite, Word Press, and Ableton Live with each class consisting of twelve students.",
         "icon": "https://media-exp1.licdn.com/dms/image/C560BAQFyYW54n5mwAw/company-logo_200_200/0?e=1596067200&v=beta&t=r_Hjf4aCGihGj4Z7w0AvYiReDEXiNXnbLx9BjEe_iCk",
         "orgLink": "https://at.doit.wisc.edu/training/software-training-for-students/"
+    },
+    {
+        "id": 8,
+        "title": "President",
+        "date": "2012",
+        "org": "EMP Non-Profit Sudent Organization at UW-Madison",
+        "location": "Madison, WI",
+        "description": "Founded the organization and formulated comprehensive marketing, branding, and development strategies resulting in a membership expansion from <10 to 320 students.",
+        "icon": "https://media-exp1.licdn.com/dms/image/C560BAQFyYW54n5mwAw/company-logo_200_200/0?e=1596067200&v=beta&t=r_Hjf4aCGihGj4Z7w0AvYiReDEXiNXnbLx9BjEe_iCk",
+        "orgLink": "https://cfli.wisc.edu/"
+    },
+    {
+        "id": 9,
+        "title": "Computer Science Student",
+        "date": "2010 - 2011",
+        "org": "Florida International University",
+        "location": "Miami, FL",
+        "description": "Studied Computer Science with a focus in Java and Math at the beginning of my Educational career prior to transferring to UW-Madison.",
+        "icon": "https://media-exp1.licdn.com/dms/image/C4E0BAQFiZejN7GwBAA/company-logo_100_100/0?e=1598486400&v=beta&t=38nDWwlQdbAoGOD3vIFewE0OEuV2r3rQHTzpUKIBwVY",
+        "orgLink": "https://www.fiu.edu/"
     }
 ]
