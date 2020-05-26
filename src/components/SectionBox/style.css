@@ -1,4 +1,4 @@
-.card {
+.section {
   height: auto;
   width: auto;
   max-width: auto;
@@ -12,28 +12,7 @@
   background-color: white;  
 }
 
-.card > .img-container {
-  height: 50%;
-  overflow: hidden;
-  background-color: rgb(233, 233, 233);
-  border-radius: 40px;
-  border: solid black;
-  border-width: 1px;
-  box-shadow: 15px 15px 15px black;
-  display: block;
-}
-
-.card > .img-container > img {
-  height: 100%;
-box-sizing: border-box;
-max-width: 100%;
-max-height: 100%;
-width: 100%;
-  overflow: hidden;  
-  padding: 20px;
-}
-
-.cardHeader {
+.sectionHeader {
   font-size: 24px;
   padding: 10px;
   margin-top: 0px;
@@ -45,21 +24,14 @@ width: 100%;
 
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
 text {
   display: block;
   width: 100%;
   min-height: 80px;
   color: black;
   text-align: left;
-  font-weight: 200;
-  font-size: 25px;
+  font-weight: 800;
   padding: 20px;
-  margin-top: 0;
   overflow-wrap: break-word;
   overflow-y: scroll;
 }
@@ -79,11 +51,7 @@ text {
 
 h3 {
   margin-top: 0px;
-}
-
-.card:hover {
-  box-shadow: 15px 15px 15px black;
-  overflow: scroll;
+  padding-top: 0px;
 }
 
 br {
@@ -109,7 +77,7 @@ border: rgb(233, 233, 233) 1px;
    padding-top: 0px;
  }
 
- .card { 
+ .section { 
    margin: 15px;
  }
  
@@ -123,7 +91,7 @@ border: rgb(233, 233, 233) 1px;
    margin-bottom: 5px;
  }
 
- .cardHeader {
+ .sectionHeader {
    font-size: 20px;
  }
 

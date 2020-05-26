@@ -15,8 +15,8 @@ function MyVerticalTimeline(props) {
 
 <VerticalTimelineElement
 className="vertical-timeline-element--work"
-contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-contentArrowStyle={{ borderRight: '13px solid  rgb(33, 150, 243)' }}
+contentStyle={{ background: 'white', color: 'black', border: '40px' }}
+contentArrowStyle={{ borderRight: '13px solid  white' }}
 date={e.date}
 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff', overflow: 'hidden', width:'auto', height:'auto', position:'center' }}
 icon={<a href={e.orgLink} target="_blank" rel="noopener noreferrer"><img src={e.icon} width='70px' height='70px' alt={e.org}/></a>}

@@ -47,7 +47,7 @@
 
 @media only screen and (max-width: 1200px) {
   .ml15 {
-    font-size: 60px;
+    font-size: 50px;
  }
  .word {
   letter-spacing: 0.25em;
@@ -58,7 +58,7 @@
 
 @media only screen and (min-width: 1201px) {
   .word {
-    font-size: 60px;
+    font-size: 55px;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.25em;

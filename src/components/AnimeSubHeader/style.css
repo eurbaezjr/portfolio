@@ -12,24 +12,24 @@ h2 {
 
 @media screen and (max-width: 827px) {
     .letters {
-      font-size: 50px;
+      font-size: 45px;
     }
   } 
 
   @media only screen and (min-width: 415px) {
     .letters {
-     font-size: 45px;
+     font-size: 40px;
   }
   }
   
   @media only screen and (max-width: 320px) {
     .letters {
-     font-size: 40px;
+     font-size: 35px;
   }
   }
 
   @media screen and (min-width: 828px) {
     .letters {
-      font-size: 60px;
+      font-size: 50px;
     }
   } 
