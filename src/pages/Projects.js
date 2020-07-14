@@ -40,6 +40,7 @@ class Projects extends React.Component {
         return Promise.all(
           res.data.map(
             async (el) => {
+              let website = el.homepage // link for deployed application
               let name = el.name
               let url = el.html_url
               let id = el.id
@@ -49,6 +50,7 @@ class Projects extends React.Component {
               let gif = await this.loadGif(el)
               console.log(readme)
               let object = {
+                website: website,
                 name: name,
                 gif: gif,
                 readme: readme,
@@ -181,6 +183,7 @@ class Projects extends React.Component {
               {this.state.results.map(result => (
                <Col key={result.id} size="xl-12 lg-12">
                 <ProjectCard
+                  website={result.website}
                   id={result.id}
                   url={result.url}
                   key={result.id}
