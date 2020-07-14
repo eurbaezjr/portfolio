@@ -27,10 +27,7 @@ class Home extends Component {
     title: "Eduardo Urbaez", 
     timeline:<MyVerticalTimeline/>,
     about: <SectionBox header="About Me">
-    Driven Full-Stack Web Developer with over four years of programmatic data marketing experience in leadership roles. 
-    Effective at combining entrepreneurship, user stories, and agile methodology while collaborating with stakeholders 
-    to learn fast and deliver work quickly. Experienced at managing project lifecycles, data-driven strategies, vendor 
-    relationships, scoping, and design. Passionate about solving new challenges to promote team and personal growth. </SectionBox>
+Driven team leader, full-stack web developer, and programmatic data marketing expert. Effective at combining technical expertise, agile methodology, and user feedback to learn fast and deliver work quickly with minimal to no supervision. Experienced at managing teams, product life cycles, data-driven strategies, marketing campaigns, vendor relationships, project scoping and design. Passionate about solving new challenges to promote team and personal growth. </SectionBox>
   }) }, 1000)}
 
   render() {
